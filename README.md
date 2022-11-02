@@ -18,11 +18,15 @@ for dir in 28-*; do echo 10 > "$dir"/resolution; echo "$dir"; done
 ```
 
 ### check settings
+``` shell
 cat 28-*/resolution  
+```
 
 ### to save it in eeprom use:
+``` shell
 cd /sys/bus/w1/devices/  
 sudo su  
 for dir in 28-*; do echo 10   > "$dir"/resolution; echo "$dir"; done  
 for dir in 28-*; do echo save > "$dir"/eeprom_cmd; echo "$dir"; done  
+```
 
