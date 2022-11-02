@@ -10,7 +10,7 @@ This script is running on a Raspberry Pi 3
 
 ## Change sensor resolution (in linux shell not Python)
 ### Change resolution temporary
-https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution
+[Reference](https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution)
 
 ``` shell
 cd /sys/bus/w1/devices/  
