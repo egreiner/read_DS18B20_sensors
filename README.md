@@ -8,17 +8,19 @@ This script is running on a Raspberry Pi 3
 
 
 # Change resolution temporary (in linux shell not Python)
-# https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution
-cd /sys/bus/w1/devices/
-sudo su
-for dir in 28-*; do echo 10 > "$dir"/resolution; echo "$dir"; done
+https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution
+
+cd /sys/bus/w1/devices/  
+sudo su  
+for dir in 28-*; do echo 10 > "$dir"/resolution; echo "$dir"; done  
+
 
 # check settings
-cat 28-*/resolution
+cat 28-*/resolution  
 
 # to save it in eeprom use:
-cd /sys/bus/w1/devices/
-sudo su
-for dir in 28-*; do echo 10   > "$dir"/resolution; echo "$dir"; done
-for dir in 28-*; do echo save > "$dir"/eeprom_cmd; echo "$dir"; done
+cd /sys/bus/w1/devices/  
+sudo su  
+for dir in 28-*; do echo 10   > "$dir"/resolution; echo "$dir"; done  
+for dir in 28-*; do echo save > "$dir"/eeprom_cmd; echo "$dir"; done  
 
