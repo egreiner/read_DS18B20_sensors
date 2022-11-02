@@ -9,8 +9,14 @@ This script is running on a Raspberry Pi 3
 
 
 ## Change sensor resolution (in linux shell not Python)
+
+This is optional.  
+The lower the resolution the faster the scan... 
+
+[More Infos here](https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution)  
+
+
 ### Change resolution temporary
-[Reference](https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution)
 
 ``` shell
 cd /sys/bus/w1/devices/  
