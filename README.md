@@ -13,10 +13,12 @@ This script is running on a Raspberry Pi 3
 This is optional.  
 The lower the resolution the faster the scan... 
 
-[More Infos here](https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution)  
+[More infos here...](https://raspberrypi.stackexchange.com/questions/14278/how-to-change-ds18b20-reading-resolution)  
 
 
 ### Change resolution temporary
+
+This is the simplest solution i have found, directly via linux shell.
 
 ``` shell
 cd /sys/bus/w1/devices/  
@@ -29,11 +31,10 @@ for dir in 28-*; do echo 10 > "$dir"/resolution; echo "$dir"; done
 cat 28-*/resolution  
 ```
 
-### to save it in eeprom use:
+### Change resolution persistent (save it in the sensor-eeprom)
 ``` shell
 cd /sys/bus/w1/devices/  
 sudo su  
 for dir in 28-*; do echo 10   > "$dir"/resolution; echo "$dir"; done  
 for dir in 28-*; do echo save > "$dir"/eeprom_cmd; echo "$dir"; done  
 ```
-
