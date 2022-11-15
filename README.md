@@ -5,7 +5,7 @@ Read DS18B20 temperature-sensors on a 1-wire bus
 - continuously refreshing temperature and status
 - indicating current read pointer, timestamp, duration device id, temperature and connection-status
 
-[Video](https://techhub.social/web/@ernstgreiner/109342855866084531)
+[Video](https://techhub.social/@ernstgreiner/109346875416334526)
 
 This script is running on a Raspberry Pi 3
 
