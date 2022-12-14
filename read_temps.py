@@ -96,10 +96,15 @@ def read_sensor(device_id, serial_no):
 
         duration = int((datetime.now() - start).total_seconds() * 1000)
 
+        # Power up
+        if '85.00' in temperature:
+            return output_error(timestamp, duration, "PowerUp     ")
+
+        # other error
         if temperature == temperature_error:
             return output_error(timestamp, duration, "Disconnected")
 
-        return output(timestamp, duration, temperature,"Connected   ")
+        return output(timestamp, duration, temperature, "Connected   ")
     except FileNotFoundError:
         return output_error(timestamp,  0, "Disconnected")
     except KeyboardInterrupt:
